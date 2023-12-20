@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    
+    <style>
+        
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        
+        .card-image {
+            width: 150px;
+            height: auto;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        
+        .payment-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .payment-label {
+            margin-left: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <h1>Payment Information</h1>
+        <form>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required>
+
+            <label for="expiry">Expiry Date:</label>
+            <input type="text" id="expiry" name="expiry" placeholder="MM/YYYY" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+
+            <label for="name">Cardholder Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <button type="submit">Pay Now</button>
+        </form>
+
+       
+        <div class="payment-option">
+            <img src="credit-card.png" alt="Credit Card" class="card-image">
+            <span class="payment-label">Credit Card</span>
+        </div>
+
+        <div class="payment-option">
+            <img src="debit-card.png" alt="Debit Card" class="card-image">
+            <span class="payment-label">Debit Card</span>
+        </div>
+
+        <div class="payment-option">
+            <img src="upi.png" alt="UPI" class="card-image">
+            <span class="payment-label">UPI</span>
+        </div>
+    </div>
+</body>
+</html>
+
